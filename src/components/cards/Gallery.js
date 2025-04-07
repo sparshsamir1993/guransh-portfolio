@@ -9,7 +9,7 @@ export default function Gallery() {
                 {[1, 2, 3, 4, 5, 6].map((i) => (
                     <Card key={i}>
                         <CardContent className="p-0">
-                            <img src={`/gallery/image${i}.jpg`} alt={`Work ${i}`} className="rounded-xl w-full" />
+                            <img src={`/Guransh-${i}.jpg`} alt={`Work ${i}`} className="rounded-xl w-full" />
                         </CardContent>
                     </Card>
                 ))}

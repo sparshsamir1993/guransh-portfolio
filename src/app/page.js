@@ -16,7 +16,7 @@ export default function Portfolio() {
       <section className="p-8 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p>
-          Jane Doe is an aspiring actress based in Toronto with experience in stage and screen. With formal training in drama and a love for the craft, Jane has participated in independent films, local theatre, and commercial projects.
+          I am an aspiring actress based in Toronto with experience in both stage and screen. With formal training in drama and a deep love for the craft, I’ve had the opportunity to work on independent films, local theatre productions, and commercial projects.
         </p>
       </section>
 
