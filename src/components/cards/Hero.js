@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function Hero() {
     return (
-        <section className="p-8 text-center">
+        <section className="p-8 pt-[96px] text-center">
             <Image
                 src="/guransh-hero.jpg"
                 alt="Guransh's photo"
