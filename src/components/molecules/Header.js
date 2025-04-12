@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Notable } from "next/font/google";
 import Image from 'next/image';
+import Logo from "../../../public/logo.png";
 
 const notableFont = Notable({
     subsets: ["latin"],
@@ -26,17 +27,15 @@ export default function Header() {
     }, []);
     return (
         <header
-            className={`fixed top-0 left-0 w-full bg-white shadow-md transition-all duration-300 ${notableFont.className}`}
+            className={`fixed top-0 left-0 w-full bg-white shadow-md z-[99] transition-all duration-300 ${notableFont.className}`}
         >
             <div
                 className={`flex items-center transition-all duration-300 ${isScrolled ? 'justify-center' : ''}`}
             >
                 <Image
-                    src="/logo.png"
+                    src={Logo}
                     alt="Logo"
-                    width={80}
-                    height={80}
-                    className={`transition-all duration-300`}
+                    className={`transition-all duration-300 w-20`}
                 />
                 <h1
                     className={`text-black text-center text-3xl md:text-6xl transition-all duration-300 transform ${isScrolled
