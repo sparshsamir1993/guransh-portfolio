@@ -2,6 +2,7 @@
 import { Button } from '@/components/atoms/Button';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import SocialMedia from '../molecules/SocialMedia';
 export default function Contact() {
 
     const [formData, setFormData] = useState({

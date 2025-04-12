@@ -10,7 +10,7 @@ export default function FadeInSection({ children, className = '' }) {
             entries => {
                 entries.forEach(entry => setIsVisible(entry.isIntersecting)); // 3️⃣ If it's visible, update state
             },
-            { threshold: 0.1 } // 4️⃣ Trigger when 10% of element is visible
+            { threshold: 0.05 } // 4️⃣ Trigger when 5% of element is visible
         );
 
         const refCurrent = domRef.current;

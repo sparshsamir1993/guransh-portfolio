@@ -1,3 +1,4 @@
+import GoogleAnalytics from "@/components/atoms/GoogleAnalytics";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -14,18 +15,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRLLCP569G"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-RRLLCP569G');
-            `,
-          }}
-        />
       </head>
       <body>
+        <GoogleAnalytics />
         {children}
         <SpeedInsights />
       </body>

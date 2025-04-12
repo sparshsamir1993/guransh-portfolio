@@ -5,6 +5,7 @@ import Contact from '@/components/cards/Contact';
 import Hero from '@/components/cards/Hero';
 import About from '@/components/cards/About';
 import FadeInSection from '@/components/cards/FadeInSection';
+import SocialMedia from '@/components/molecules/SocialMedia';
 
 export default function Portfolio() {
   return (
@@ -21,6 +22,9 @@ export default function Portfolio() {
 
       <FadeInSection>
         <Gallery />
+      </FadeInSection>
+      <FadeInSection>
+        <SocialMedia />
       </FadeInSection>
 
       <FadeInSection>
