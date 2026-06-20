@@ -1,8 +1,9 @@
 import React from "react";
-export function Button({ children }) {
+
+export function Button({ children, className = '' }) {
     return (
-        <button className="px-6 py-2 border border-gray-800 text-white rounded-full bg-gray-800 hover:bg-white hover:text-black transition duration-300 font-medium tracking-wide">
+        <button className={`px-8 py-3 border border-amber-400/70 text-amber-400 text-xs tracking-[0.2em] uppercase hover:bg-amber-400 hover:text-black transition-all duration-300 font-medium ${className}`}>
             {children}
         </button>
-    )
+    );
 }

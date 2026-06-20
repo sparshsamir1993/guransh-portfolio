@@ -23,31 +23,43 @@ export default function Gallery() {
     }, [selected]);
 
     return (
-        <section id="gallery" className="py-16 px-8 bg-[#0d0d0d] scroll-mt-20">
-            <h2 className="text-2xl font-semibold mb-8 text-center text-white">Gallery</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {images.map((image, i) => (
-                    <div
-                        key={i}
-                        className="overflow-hidden rounded-xl cursor-pointer group"
-                        onClick={() => setSelected(image)}
-                    >
-                        <Image
-                            src={image}
-                            alt={`Gallery photo ${i + 1}`}
-                            className="w-full rounded-xl transition-transform duration-500 group-hover:scale-105"
-                        />
-                    </div>
-                ))}
+        <section id="gallery" className="py-24 px-4 md:px-8 bg-[#0d0d0d] scroll-mt-20">
+            <div className="max-w-7xl mx-auto">
+                <div className="flex items-center gap-6 mb-12">
+                    <span className="text-[11px] tracking-[0.35em] text-gray-500 uppercase whitespace-nowrap">Gallery</span>
+                    <div className="flex-1 h-px bg-white/10" />
+                </div>
+
+                <div
+                    className="grid grid-cols-2 md:grid-cols-3 gap-2"
+                    style={{ gridAutoRows: '240px' }}
+                >
+                    {images.map((image, i) => (
+                        <div
+                            key={i}
+                            className={`relative overflow-hidden cursor-pointer group ${i === 0 ? 'row-span-2' : ''}`}
+                            onClick={() => setSelected(image)}
+                        >
+                            <Image
+                                src={image}
+                                alt={`Gallery photo ${i + 1}`}
+                                fill
+                                sizes="(max-width: 768px) 50vw, 33vw"
+                                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-500" />
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {selected && (
                 <div
-                    className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+                    className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
                     onClick={() => setSelected(null)}
                 >
                     <button
-                        className="absolute top-4 right-6 text-white text-4xl leading-none hover:text-amber-400 transition-colors"
+                        className="absolute top-6 right-8 text-gray-500 text-3xl leading-none hover:text-white transition-colors"
                         onClick={() => setSelected(null)}
                     >
                         &times;
@@ -59,7 +71,7 @@ export default function Gallery() {
                         <Image
                             src={selected}
                             alt="Full size photo"
-                            className="rounded-xl object-contain max-h-[90vh] w-full"
+                            className="object-contain max-h-[90vh] w-full"
                         />
                     </div>
                 </div>

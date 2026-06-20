@@ -28,7 +28,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 w-full bg-[#0d0d0d] border-b border-white/10 z-[99] transition-all duration-300 ${notableFont.className}`}>
+        <header className={`fixed top-0 left-0 w-full z-[99] transition-all duration-500 ${notableFont.className} ${isScrolled ? 'bg-[#0d0d0d] border-b border-white/10' : 'bg-transparent'}`}>
             <div className="flex items-center justify-between px-6 py-2">
                 <div className="flex items-center gap-4">
                     <Image src={Logo} alt="Logo" className="w-16 transition-all duration-300 invert" />
